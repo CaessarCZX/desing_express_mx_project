@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es-Es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -7,14 +8,95 @@
     <!-- Pending review to add description to page -->
     <!-- <meta name="description" content=""> -->
     <title>Desing Express Mx</title>
+    <link rel="shortcut icon" href="./src/assets/media/favicon/promo-icon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./src/assets/css/styles.css">
+    <link rel="stylesheet" href="./src/assets/css/animate.css">
 </head>
+
 <body>
     <div class="root">
-        <header></header>
-        <main></main>
+        <header>
+            <div class="menu-block">
+                <div class="logo-wrap">
+                    <a href="index.html">
+                        <img src="./src/assets/media/img/logo/logo-white.png" alt="Inicio desing express mexico">
+                    </a>
+                </div>
+                <div class="header-right-block">
+                    <nav>
+                        <ul class="menu-wrap">
+                            <li><a href="#">Inicio</a></li>
+                            <li><a href="#">Nosotros</a></li>
+                            <li><a href="#">Proyectos</a></li>
+                            <li><a href="#">Equipo</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="#">Contacts</a></li>
+                        </ul>
+                    </nav>
+                    <div class="search-place">
+                        <form method="get" action="">
+                            <label for="Search"></label>
+                            <input type="text" id="Search" name="Search" value="Search..." onfocus="if(this.value == 'Search...') this.value = '';" onBlur="if (this.value == '') this.value = 'Search...';">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section id="home">
+                <!-- Custom slider -->
+                <div class="slideshow-container">
+                    <!-- Active slides -->
+                    <div class="mySlides fade">
+                        <img src="./src/assets/media/img/slider/slide1_bg.jpg" alt="">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="./src/assets/media/img/slider/slide2_bg.jpg" alt="">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="./src/assets/media/img/slider/slide3_bg.jpg" alt="">
+                    </div>
+
+                    <!-- Navigation -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095</a>
+                    
+                    <!-- Pagination active -->
+                    <div class="pagination-area">
+                        <span class="dot" onclick="currentSlides(1)"></span>
+                        <span class="dot" onclick="currentSlides(2)"></span>
+                        <span class="dot" onclick="currentSlides(3)"></span>
+                    </div>
+                </div>
+            </section>
+            <section id="meet-us">
+                <div class="content-wrap">
+                    <div class="meet-us-item">
+                        <span><b>En</b> 1991</span>
+                        <p>Le dimos luz y color al primer anuncio en Mérida, 30 años después iluminamos todo el Sureste</p>
+                    </div>
+                    <div class="meet-us-item">
+                        <span><b>Contamos</b> con</span>
+                        <p>Un equipo multidisciplinario que comparte nuestra visión de calidad y profesionalismo</p>
+                    </div>
+                    <div class="meet-us-item">
+                        <span><b>En</b> Desing Express</span>
+                        <p>Contamos con una amplia gama de soluciones, productos y servicios para ofrecerte opciones integrales para la imagen de tu negocio.</p>
+                    </div>
+                    <div class="meet-us-item">
+                        <span><b>Creemos</b> que</span>
+                        <p>La calidad de nuestro trabajo y un buen servicio han sido la clave para mantenernos durante tantos años en el mercado, y eso es apreciado por nuestros clientes-amigos.</p>
+                    </div>
+                </div>
+            </section>
+            <section id="projects">
+                <div style="padding: 5rem;"></div>
+            </section>
+        </main>
         <footer></footer>
     </div>
     <script src="./src/assets/js/index.js" defer="defer"></script>
+    <script src="./src/assets/js/_custom-slider.js" defer="defer"></script>
 </body>
+
 </html>
