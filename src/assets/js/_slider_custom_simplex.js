@@ -46,14 +46,28 @@ const stopSlideTimer = () => {
   clearInterval(slideTimer);
 };
 
-document.addEventListener('visibilitychange', () => {
+const pauseOnHover = () => {
+  const slider = document.querySelector('.slideshow-container');
+
+  slider.addEventListener('mouseenter', () => {
+    stopSlideTimer();
+  });
+
+  slider.addEventListener('mouseleave', () => {
+    startSlideTimer();
+  });
+};
+
+const handleVisibilityChange = () => {
   if (document.visibilityState === 'visible') {
     startSlideTimer();
   } else {
     stopSlideTimer();
   }
-});
+};
+
+document.addEventListener('visibilitychange', handleVisibilityChange);
 
 showSlides(slideIndex);
 startSlideTimer();
-
+pauseOnHover();
