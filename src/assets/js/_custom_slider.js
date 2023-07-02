@@ -1,5 +1,6 @@
 'use strict';
 
+const timeOut = 7000;
 let slideIndex = 0;
 
 const plusSlides = (numberSlide) => {
@@ -12,7 +13,7 @@ const currentSlides = (numberSlide) => {
 
 const showSlides = (numberSlide) => {
   const slides = document.querySelectorAll('.mySlides');
-  const dots = document.querySelectorAll('.dot');
+  const lines = document.querySelectorAll('.line');
 
   if (numberSlide > slides.length) {
     slideIndex = 1;
@@ -23,32 +24,33 @@ const showSlides = (numberSlide) => {
 
   // Hide slides
   slides.forEach((slide) => {
-    slide.style.display = 'none';
+    slide.classList.remove('active');
   });
 
   // Remove active class from dots
-  dots.forEach((dot) => {
-    dot.classList.remove('active');
+  lines.forEach((line) => {
+    line.classList.remove('active');
   });
 
-  slides[slideIndex - 1].style.display = 'block';
-  dots[slideIndex - 1].classList.add('active');
+  slides[slideIndex - 1].classList.add('active');
+  lines[slideIndex - 1].classList.add('active');
 };
 
 // let slideAutoIndex = 0
 
 const autoSlides = () => {
   const slides = document.querySelectorAll('.mySlides');
-  const dots = document.querySelectorAll('.dot');
+  const lines = document.querySelectorAll('.line');
 
   // Hide slides
   slides.forEach((slide) => {
-    slide.style.display = 'none';
+    // slide.style.display = 'none';
+    slide.classList.remove('active');
   });
 
   // Remove active class from dots
-  dots.forEach((dot) => {
-    dot.classList.remove('active');
+  lines.forEach((line) => {
+    line.classList.remove('active');
   });
 
   // Increment slide index
@@ -58,13 +60,14 @@ const autoSlides = () => {
     slideIndex = 1
   }
 
-  slides[slideIndex - 1].style.display = 'block';
-  dots[slideIndex - 1].classList.add('active');
+  // slides[slideIndex - 1].style.display = 'block';
+  slides[slideIndex - 1].classList.add('active');
+  lines[slideIndex - 1].classList.add('active');
 
-  setTimeout(autoSlides, 5000);
+  setTimeout(autoSlides, timeOut);
   // Chnage image every 5 seconds
 }
 
 
-showSlides(slideIndex);
+// showSlides(slideIndex);
 autoSlides();

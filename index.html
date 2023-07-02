@@ -2,101 +2,180 @@
 <html lang="es-Es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Pending review to add description to page -->
-    <!-- <meta name="description" content=""> -->
-    <title>Desing Express Mx</title>
-    <link rel="shortcut icon" href="./src/assets/media/favicon/promo-icon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./src/assets/css/styles.css">
-    <link rel="stylesheet" href="./src/assets/css/animate.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Pending review to add description to page -->
+  <!-- <meta name="description" content=""> -->
+  <title>Desing Express Mx</title>
+  <link rel="shortcut icon" href="./src/assets/media/favicon/promo-icon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./src/assets/css/styles.css">
+  <link rel="stylesheet" href="./src/assets/css/animate.css">
 </head>
 
 <body>
-    <div class="root">
-        <header>
-            <div class="menu-block">
-                <div class="logo-wrap">
-                    <a href="index.html">
-                        <img src="./src/assets/media/img/logo/logo-white.png" alt="Inicio desing express mexico">
-                    </a>
-                </div>
-                <div class="header-right-block">
-                    <nav>
-                        <ul class="menu-wrap">
-                            <li><a href="#">Inicio</a></li>
-                            <li><a href="#">Nosotros</a></li>
-                            <li><a href="#">Proyectos</a></li>
-                            <li><a href="#">Equipo</a></li>
-                            <li><a href="#">News</a></li>
-                            <li><a href="#">Contacts</a></li>
-                        </ul>
-                    </nav>
-                    <div class="search-place">
-                        <form method="get" action="">
-                            <label for="Search"></label>
-                            <input type="text" id="Search" name="Search" value="Search..." onfocus="if(this.value == 'Search...') this.value = '';" onBlur="if (this.value == '') this.value = 'Search...';">
-                        </form>
-                    </div>
-                </div>
+  <div class="root">
+    <header>
+      <div class="menu-block">
+        <div class="logo-wrap">
+          <a href="index.html">
+            <img src="./src/assets/media/img/logo/logo-white.png" alt="Inicio desing express mexico">
+          </a>
+        </div>
+        <div class="header-right-block">
+          <nav>
+            <ul class="menu-wrap">
+              <li><a href="#home">Inicio</a></li>
+              <li><a href="#meet-us">Nosotros</a></li>
+              <li><a href="#">Proyectos</a></li>
+              <li><a href="#">Equipo</a></li>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Contacts</a></li>
+            </ul>
+          </nav>
+          <div class="search-place">
+            <form method="get" action="">
+              <label for="Search"></label>
+              <input type="text" id="Search" name="Search" value="Search..."
+                onfocus="if(this.value == 'Search...') this.value = '';"
+                onBlur="if (this.value == '') this.value = 'Search...';">
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section id="home">
+        <!-- Custom slider -->
+        <div class="slideshow-container">
+          <!-- Active slides -->
+          <div class="mySlides fade">
+            <div class="slider-main-text-container">
+              <p>Iluminando la <span>península desde</span> 1991</p>
+              <p>Los expertos en imagen empresarial</p>
             </div>
-        </header>
-        <main>
-            <section id="home">
-                <!-- Custom slider -->
-                <div class="slideshow-container">
-                    <!-- Active slides -->
-                    <div class="mySlides fade">
-                        <img src="./src/assets/media/img/slider/slide1_bg.jpg" alt="">
-                    </div>
-                    <div class="mySlides fade">
-                        <img src="./src/assets/media/img/slider/slide2_bg.jpg" alt="">
-                    </div>
-                    <div class="mySlides fade">
-                        <img src="./src/assets/media/img/slider/slide3_bg.jpg" alt="">
-                    </div>
+            <img src="./src/assets/media/img/slider/slide1_bg.jpg" alt="">
+          </div>
+          <div class="mySlides fade">
+            <div class="slider-main-text-container">
+              <p>Fabricando anuncios <span>y soluciones</span> gráficas</p>
+              <p>Para negocios en crecimiento</p>
+            </div>
+            <img src="./src/assets/media/img/slider/slide2_bg.jpg" alt="">
+          </div>
+          <div class="mySlides fade">
+            <div class="slider-main-text-container">
+              <p>Cuidamos cada <span>detalle</span></p>
+              <p>En nuestro trabajo</p>
+            </div>
+            <img src="./src/assets/media/img/slider/slide3_bg.jpg" alt="">
+          </div>
+          <div class="mySlides fade">
+            <div class="slider-main-text-container">
+              <p>Para darte un <span>trabajo de calidad</span></p>
+              <p>Como mereces</p>
+            </div>
+            <img src="./src/assets/media/img/slider/slide2_bg3.jpg" alt="">
+          </div>
 
-                    <!-- Navigation -->
-                    <a class="prev" onclick="plusSlides(-1)">&#10094</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095</a>
-                    
-                    <!-- Pagination active -->
-                    <div class="pagination-area">
-                        <span class="dot" onclick="currentSlides(1)"></span>
-                        <span class="dot" onclick="currentSlides(2)"></span>
-                        <span class="dot" onclick="currentSlides(3)"></span>
-                    </div>
-                </div>
-            </section>
-            <section id="meet-us">
-                <div class="content-wrap">
-                    <div class="meet-us-item">
-                        <span><b>En</b> 1991</span>
-                        <p>Le dimos luz y color al primer anuncio en Mérida, 30 años después iluminamos todo el Sureste</p>
-                    </div>
-                    <div class="meet-us-item">
-                        <span><b>Contamos</b> con</span>
-                        <p>Un equipo multidisciplinario que comparte nuestra visión de calidad y profesionalismo</p>
-                    </div>
-                    <div class="meet-us-item">
-                        <span><b>En</b> Desing Express</span>
-                        <p>Contamos con una amplia gama de soluciones, productos y servicios para ofrecerte opciones integrales para la imagen de tu negocio.</p>
-                    </div>
-                    <div class="meet-us-item">
-                        <span><b>Creemos</b> que</span>
-                        <p>La calidad de nuestro trabajo y un buen servicio han sido la clave para mantenernos durante tantos años en el mercado, y eso es apreciado por nuestros clientes-amigos.</p>
-                    </div>
-                </div>
-            </section>
-            <section id="projects">
-                <div style="padding: 5rem;"></div>
-            </section>
-        </main>
-        <footer></footer>
-    </div>
-    <script src="./src/assets/js/app.js" defer="defer"></script>
-    <script src="./src/assets/js/_custom_slider.js" defer="defer"></script>
+          <!-- Navigation -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094</a>
+          <a class="next" onclick="plusSlides(1)">&#10095</a>
+
+          <!-- Pagination active -->
+          <div class="pagination-area">
+            <div class="line" onclick="currentSlides(1)">
+              <div class="load-bar-line"></div>
+            </div>
+            <div class="line" onclick="currentSlides(2)">
+              <div class="load-bar-line"></div>
+            </div>
+            <div class="line" onclick="currentSlides(3)">
+              <div class="load-bar-line"></div>
+            </div>
+            <div class="line" onclick="currentSlides(3)">
+              <div class="load-bar-line"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="meet-us">
+        <div class="content-wrap" id="meet-us-load">
+          <div class="meet-us-item">
+            <span><b>En</b> 1991</span>
+            <p>Le dimos luz y color al primer anuncio en Mérida, 30 años después iluminamos todo el Sureste</p>
+          </div>
+          <div class="meet-us-item">
+            <span><b>Contamos</b> con</span>
+            <p>Un equipo multidisciplinario que comparte nuestra visión de calidad y profesionalismo</p>
+          </div>
+          <div class="meet-us-item">
+            <span><b>En</b> Desing Express</span>
+            <p>Contamos con una amplia gama de soluciones, productos y servicios para ofrecerte opciones integrales para
+              la imagen de tu negocio.</p>
+          </div>
+          <div class="meet-us-item">
+            <span><b>Creemos</b> que</span>
+            <p>La calidad de nuestro trabajo y un buen servicio han sido la clave para mantenernos durante tantos años
+              en el mercado, y eso es apreciado por nuestros clientes-amigos.</p>
+          </div>
+        </div>
+      </section>
+      <section id="services">
+        <!-- <div class="text-container" style="display: flex; justify-content: flex-start;">
+          <span style="font-family: inherit; font-size: 6vw; color: #000; opacity: 0.7; line-height: 0.8;"><b>Nuestros</b> servicios</span>
+        </div> -->
+        <div class="content-wrap" id="services-load">
+          <ul class="sci">
+            <li data-text="Anuncions Luminosos" data-color="#407ba7">
+              <a href="#"><img src="./src/assets/media/img/i1.png" alt="Anuncios luminosos"></a>
+            </li>
+            <li data-text="Impresión de lonas" data-color="#004e89">
+              <a href="#"><img src="./src/assets/media/img/i2.png" alt="Anuncios luminosos"></a>
+            </li>
+            <li data-text="Vinilos" data-color="#00043a">
+              <a href="#"><img src="./src/assets/media/img/i3.png" alt="Anuncios luminosos"></a>
+            </li>
+            <li data-text="Letras Block" data-color="#ff002b">
+              <a href="#"><img src="./src/assets/media/img/i4.png" alt="Anuncios luminosos"></a>
+            </li>
+            <li data-text="Totem" data-color="#800016">
+              <a href="#"><img src="./src/assets/media/img/i5.png" alt="Anuncios luminosos"></a>
+            </li>
+            <li data-text="Señalización" data-color="#c00021">
+              <a href="#"><img src="./src/assets/media/img/i6.png" alt="Anuncios luminosos"></a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="site-branding">
+        <div class="content-wrapper">
+          <div class="branding-txt-container" id="branding-load-sc1">
+            <div class="branding-title">
+              <h3><span>Desing Express</span> De México</h3>
+            </div>
+            <div class="branding-txt">
+              <p>Nos dedicamos a crear experiencias, transformar marcas, desarrollar estrategias y a generar alianzas
+                para que nuestros clientes crezcan.</p>
+              <p>Además, contamos con tecnología y materiales de alta calidad para entregar productos innovadores,
+                funcionales y eficaces.</p>
+              <p>Hemos desarrollado proyectos para distintos sectores comerciales en la Península de Yucatán, Tabasco,
+                Chiapas, Veracruz, Oaxaca, Campeche, Quintana Roo.</p>
+            </div>
+          </div>
+          <div class="branding-img-container" id="branding-load-sc2">
+            <img src="./src/assets/media/img/img1.png" alt="Anuncios publicitarios">
+          </div>
+        </div>
+      </section>
+      <section id="our-projects">
+
+      </section>
+    </main>
+    <footer></footer>
+  </div>
+  <script defer type="module" src="./src/assets/js/app.js"></script>
+  <script defer src="./src/assets/js/_custom_slider.js"></script>
 </body>
 
 </html>
