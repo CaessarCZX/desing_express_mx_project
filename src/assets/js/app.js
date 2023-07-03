@@ -2,6 +2,11 @@
 // Services animation area
 const icons = document.querySelectorAll('.sci li');
 const bgSection = document.querySelector('#services');
+let serviceFirstTime = true;
+
+if(serviceFirstTime) {
+  bgSection.style.backgroundColor = icons[5].getAttribute('data-color');
+}
 
 icons.forEach(icon => {
   icon.addEventListener('mouseenter', (event) => {
@@ -14,6 +19,15 @@ icons.forEach(icon => {
 });
 
 // Vanilla tilt js 
+document.addEventListener('DOMContentLoaded', () => {
+  const tiltElemnts = document.querySelectorAll('.sci li');
+  VanillaTilt.init(tiltElemnts, {
+    max: 30,
+    speed: 400,
+    glare: true,
+    "max-glare": 1
+  });
+});
 
 //Scroll animation area
 let animationTargets = [];
