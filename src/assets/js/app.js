@@ -2,20 +2,17 @@
 // Services animation area
 const icons = document.querySelectorAll('.sci li');
 const bgSection = document.querySelector('#services');
-let serviceFirstTime = true;
+// let serviceFirstTime = true;
 
-if(serviceFirstTime) {
-  bgSection.style.backgroundColor = icons[5].getAttribute('data-color');
-}
+// if(serviceFirstTime) {
+//   bgSection.style.backgroundColor = icons[5].getAttribute('data-color');
+// }
 
 icons.forEach(icon => {
   icon.addEventListener('mouseenter', (event) => {
     let color = event.target.getAttribute('data-color');
     bgSection.style.backgroundColor = color;
   });
-  // icon.addEventListener('mouseleave', (event) => {
-  //   bgSection.style.backgroundColor = '#ffffff';
-  // });
 });
 
 // Vanilla tilt js 

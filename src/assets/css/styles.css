@@ -521,4 +521,51 @@ header .menu-block .header-right-block .search-place form input:focus {
   transform: translateY(-109px);
 }
 
+#our-brands {
+  padding: 3rem;
+}
+#our-brands .slide-rail-container {
+  display: flex;
+  max-width: 1200px;
+  padding: 1rem;
+  margin: 0 auto;
+  opacity: 1;
+  overflow: hidden;
+}
+#our-brands .slide-rail-container .slide-track {
+  display: inherit;
+  -webkit-animation: scroll-slider 24s linear infinite;
+  animation: scroll-slider 42s linear infinite;
+  width: 2400px;
+}
+#our-brands .slide-rail-container .slide-track .slide-item {
+  width: 200px;
+}
+#our-brands .slide-rail-container .slide-track .slide-item img {
+  width: 10vw;
+  min-width: 95px;
+  max-width: 120px;
+}
+
+@-webkit-keyframes scroll-slider {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-200px * 6));
+    transform: translateX(calc(-200px * 6));
+  }
+}
+@keyframes scroll-slider {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-200px * 6));
+    transform: translateX(calc(-200px * 6));
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
