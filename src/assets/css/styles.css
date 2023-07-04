@@ -454,13 +454,13 @@ header .menu-block .header-right-block .search-place form input:focus {
   align-items: center;
   text-decoration: none;
   transform-style: preserve-3d;
-  perspective: 500px;
+  transform: perspective(1000px);
   pointer-events: none;
 }
 #services .content-wrap .sci li a img {
   object-fit: cover;
   width: 100%;
-  transform: translateY(-131px);
+  transform: translateY(-131px) translateZ(20px);
 }
 
 #site-branding {
@@ -573,6 +573,10 @@ header .menu-block .header-right-block .search-place form input:focus {
     -webkit-transform: translateX(calc(-200px * 6));
     transform: translateX(calc(-200px * 6));
   }
+}
+Footer {
+  padding: 3rem;
+  background-color: #1c1c1c;
 }
 
 /*# sourceMappingURL=styles.css.map */
