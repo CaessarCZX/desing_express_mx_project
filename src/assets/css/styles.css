@@ -578,5 +578,51 @@ Footer {
   padding: 3rem;
   background-color: #1c1c1c;
 }
+Footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+Footer .container .foo-space {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+Footer .container .foo-space.fs-space {
+  border-bottom: 1px solid #393636;
+  padding-bottom: 3rem;
+}
+Footer .container .foo-space .container-logo {
+  width: 100px;
+  min-width: 50px;
+}
+Footer .container .foo-space .container-logo img {
+  width: 100%;
+  object-fit: cover;
+}
+Footer .container .foo-space .social-media {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+Footer .container .foo-space .social-media li {
+  padding: 1rem;
+  opacity: 0.3;
+  transition: opacity 0.3s ease-in;
+}
+Footer .container .foo-space .social-media li:hover {
+  opacity: 1;
+}
+Footer .container .foo-space .social-media li a {
+  display: block;
+  width: 2.2rem;
+  height: 2.2rem;
+  overflow: hidden;
+}
+Footer .container .foo-space .social-media li a img {
+  width: 100%;
+  object-fit: cover;
+}
 
 /*# sourceMappingURL=styles.css.map */
