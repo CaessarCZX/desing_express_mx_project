@@ -1,5 +1,19 @@
+/*-----------------------------------------------------------------------------------*/
+/*	NICESCROLL
+/*-----------------------------------------------------------------------------------*/
+jQuery(document).ready(function() {
+	jQuery("body").niceScroll({
+		cursorcolor:"#333",
+		cursorborder:"0px",
+		cursorwidth :"8px",
+		zindex:"9999"
+	});
+});
 
-// Services animation area
+
+/*-----------------------------------------------------------------------------------*/
+/*	Services animation area
+/*-----------------------------------------------------------------------------------*/
 const icons = document.querySelectorAll('.sci li');
 const bgSection = document.querySelector('#services');
 // let serviceFirstTime = true;
@@ -15,7 +29,9 @@ icons.forEach(icon => {
   });
 });
 
-// Vanilla tilt js 
+/*-----------------------------------------------------------------------------------*/
+/*	Vanilla tilt js 
+/*-----------------------------------------------------------------------------------*/
 document.addEventListener('DOMContentLoaded', () => {
   const tiltElemnts = document.querySelectorAll('.sci li');
   VanillaTilt.init(tiltElemnts, {
@@ -26,7 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-//Scroll animation area
+/*-----------------------------------------------------------------------------------*/
+/*	Scroll animation area
+/*-----------------------------------------------------------------------------------*/
 let animationTargets = [];
 const elemenTarget = [
   'meet-us-load',

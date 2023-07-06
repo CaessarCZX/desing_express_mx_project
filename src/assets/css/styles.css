@@ -26,20 +26,6 @@
   box-sizing: border-box;
 }
 
-::-webkit-scrollbar {
-  width: 10px;
-  /* Ancho de la barra de desplazamiento */
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #000;
-  /* Color del thumb */
-}
-
-::-webkit-scrollbar-track {
-  background-color: #101a4c;
-}
-
 a {
   text-decoration: none;
   color: inherit;
@@ -67,6 +53,8 @@ body {
   font-family: "Roboto", sans-serif;
   min-width: 320px;
   -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
   scroll-behavior: smooth;
 }
@@ -93,11 +81,15 @@ header .menu-block .logo-wrap {
   min-width: 50px;
 }
 header .menu-block .logo-wrap img {
+  -o-object-fit: cover;
   object-fit: cover;
   width: 100%;
+  transition: -webkit-filter 0.17s ease-out;
   transition: filter 0.17s ease-out;
+  transition: filter 0.17s ease-out, -webkit-filter 0.17s ease-out;
 }
 header .menu-block .logo-wrap img:hover {
+  -webkit-filter: drop-shadow(0 2px 2px rgba(255, 255, 255, 0.5));
   filter: drop-shadow(0 2px 2px rgba(255, 255, 255, 0.5));
 }
 header .menu-block .header-right-block {
@@ -226,11 +218,13 @@ header .menu-block .header-right-block .search-place form input:focus {
   -webkit-animation-duration: 3s;
   animation-name: fadeSlider;
   animation-duration: 3s;
+  -webkit-animation-direction: alternate;
   animation-direction: alternate;
 }
 .slideshow-container .mySlides img {
   height: 100vh;
   width: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 .slideshow-container .mySlides.active {
@@ -250,6 +244,9 @@ header .menu-block .header-right-block .search-place form input:focus {
   font-weight: bold;
   font-size: 55px;
   transition: background-color 0.7s ease-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   border-radius: 0 3px 3px 0;
 }
@@ -468,6 +465,7 @@ header .menu-block .header-right-block .search-place form input:focus {
   pointer-events: none;
 }
 #services .content-wrap .sci li a img {
+  -o-object-fit: cover;
   object-fit: cover;
   width: 100%;
   transform: translateY(-131px) translateZ(20px);
@@ -527,12 +525,14 @@ header .menu-block .header-right-block .search-place form input:focus {
 #site-branding .content-wrapper .branding-img-container img {
   width: 100%;
   min-width: 270px;
+  -o-object-fit: cover;
   object-fit: cover;
   transform: translateY(-109px);
 }
 
 #our-brands {
   padding: 3rem;
+  background-color: #fff;
 }
 #our-brands .slide-rail-container {
   display: flex;
@@ -555,32 +555,32 @@ header .menu-block .header-right-block .search-place form input:focus {
   width: 10vw;
   min-width: 95px;
   max-width: 120px;
+  -webkit-filter: grayscale(1);
   filter: grayscale(1);
   opacity: 0.5;
+  transition: opacity 0.3s ease-in, -webkit-filter 0.3s ease-in;
   transition: filter 0.3s ease-in, opacity 0.3s ease-in;
+  transition: filter 0.3s ease-in, opacity 0.3s ease-in, -webkit-filter 0.3s ease-in;
 }
 #our-brands .slide-rail-container .slide-track .slide-item img:hover {
+  -webkit-filter: grayscale(0);
   filter: grayscale(0);
   opacity: 0.9;
 }
 
 @-webkit-keyframes scroll-slider {
   0% {
-    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
   100% {
-    -webkit-transform: translateX(calc(-200px * 6));
     transform: translateX(calc(-200px * 6));
   }
 }
 @keyframes scroll-slider {
   0% {
-    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
   100% {
-    -webkit-transform: translateX(calc(-200px * 6));
     transform: translateX(calc(-200px * 6));
   }
 }
@@ -613,6 +613,7 @@ Footer .container .foo-space .container-logo {
 }
 Footer .container .foo-space .container-logo img {
   width: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 Footer .container .foo-space .social-media {
@@ -636,6 +637,7 @@ Footer .container .foo-space .social-media li a {
 }
 Footer .container .foo-space .social-media li a img {
   width: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 Footer .container .foo-space .left-block {
