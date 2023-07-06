@@ -530,6 +530,12 @@ header .menu-block .header-right-block .search-place form input:focus {
   transform: translateY(-109px);
 }
 
+#our-projects .content-wrap .slider-draggable-container .slider-drag-rail .slide-item img {
+  height: 340px;
+  object-fit: cover;
+  width: 33.3333333333%;
+}
+
 #our-brands {
   padding: 3rem;
   background-color: #fff;
