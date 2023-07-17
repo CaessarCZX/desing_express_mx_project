@@ -10,8 +10,8 @@
   <title>Desing Express Mx</title>
   <link rel="shortcut icon" href="./src/assets/media/favicon/promo-icon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./src/assets/css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="./src/assets/css/styles.css">
   <link rel="stylesheet" href="./src/assets/css/media.css">
+  <link rel="stylesheet" href="./src/assets/css/styles.css">
 </head>
 
 <body>
@@ -20,6 +20,7 @@
     <!-- Header section -->
     <header>
       <div class="menu-block">
+        <button class="header-mobile-menu" id="open-menu"></button>
         <div class="logo-wrap">
           <a href="index.html">
             <img src="./src/assets/media/img/logo/logo-white.png" alt="Inicio desing express mexico">
@@ -42,6 +43,11 @@
                 onfocus="if(this.value == 'Search...') this.value = '';"
                 onBlur="if (this.value == '') this.value = 'Search...';">
             </form>
+            <div class="search-place-md-screen">
+              <button id="search-place-md-activator">
+                <img src="./src/assets/media/img/search-icon.svg" alt="Busar">
+              </button>
+            </div>
           </div>
         </div>
       </div>

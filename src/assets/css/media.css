@@ -1,11 +1,11 @@
 @media screen and (max-width: 997px) {
+  header .search-place {
+    padding: 0;
+  }
   header .search-place:before {
     display: none;
   }
   header .search-place form {
-    display: none;
-  }
-  header .search-place form input {
     display: none;
   }
 }

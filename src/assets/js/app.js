@@ -1,17 +1,13 @@
 /*-----------------------------------------------------------------------------------*/
-/*	NICESCROLL
+/*	Header wrap menu
 /*-----------------------------------------------------------------------------------*/
-// jQuery(document).ready(function() {
-// 	jQuery("body").niceScroll({
-// 		cursorcolor:"#333",
-// 		cursorborder:"0px",
-// 		cursorwidth :"8px",
-// 		zindex:"9999"
-// 	});
-// });
+const midSearcher = document.querySelector('.search-place form');
+const searcherMidActivator = document.querySelector('#search-place-md-activator');
 
-/*Paused function when detecting errors in code.
-
+searcherMidActivator.addEventListener('click', () => {
+  midSearcher.classList.toggle('md-screen');
+  searcherMidActivator.classList.toggle('active-search');
+})
 /*-----------------------------------------------------------------------------------*/
 /*	Services animation area
 /*-----------------------------------------------------------------------------------*/
