@@ -589,7 +589,7 @@ header .menu-block .header-right-block .search-place form input:focus {
   display: inline;
 }
 #our-projects .slider-draggable-container .slider-draggable .slide-item:hover img {
-  transform: scale(0.95);
+  transform: scale(1.1);
   position: relative;
   z-index: 7;
   filter: contrast(1);

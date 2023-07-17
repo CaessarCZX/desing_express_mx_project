@@ -159,6 +159,7 @@ slider.addEventListener('touchend', dragStop);
 window.addEventListener('resize', getFirstImgWidth);
 
 getFirstImgWidth(); //Getting first time image size
+
 /*-----------------------------------------------------------------------------------*/
 /*	Scroll animation area
 /*-----------------------------------------------------------------------------------*/
@@ -193,3 +194,42 @@ elemenTarget.forEach(element => {
 animationTargets.forEach(target => {
   mainObserver.observe(target);
 })
+
+/*-----------------------------------------------------------------------------------*/
+/*	Smooth Scroll
+/*-----------------------------------------------------------------------------------*/
+
+const smoothScroll = (target, duration) => {
+  const headerDistance = document.querySelector('header').offsetHeight;
+  const element = document.querySelector(target);
+  const elementPosition = element.offsetTop;
+  const startPosition = window.scrollY;
+  const distance = elementPosition - startPosition - headerDistance;
+  let startTime = null;
+
+  const animation = (currentTime) => {
+    if (startTime === null) startTime = currentTime;
+    const timeElapsed = currentTime - startTime;
+    const run = ease(timeElapsed, startPosition, distance, duration);
+    window.scrollTo(0, run);
+    if (timeElapsed < duration) requestAnimationFrame(animation);
+  }
+
+  // Function to aceleration for smooth displacement
+  const ease = (t, b, c, d) => {
+    t /= d / 2;
+    if (t < 1) return c / 2 * t * t + b;
+    t--;
+    return -c / 2 * (t * (t - 2) - 1) + b;
+  }
+
+  requestAnimationFrame(animation);
+}
+
+const toMeetUsSection = document.querySelector('#toMeetUs');
+
+toMeetUsSection.addEventListener('click', () => {
+  smoothScroll('#meet-us', 1000);
+})
+
+
