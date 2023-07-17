@@ -266,4 +266,11 @@ toMeetUsSection.addEventListener('click', () => {
   smoothScroll('#meet-us', 1000);
 })
 
+/*-----------------------------------------------------------------------------------*/
+/*	Loader disabler when HTML Document is loaded and DOM is ready.
+/*-----------------------------------------------------------------------------------*/
+const preloader = document.querySelector('#preloader-wrapper');
 
+window.addEventListener('load', () => {
+  preloader.classList.add('loaded');
+})

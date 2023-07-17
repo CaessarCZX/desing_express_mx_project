@@ -1,0 +1,13 @@
+@media screen and (max-width: 997px) {
+  header .search-place:before {
+    display: none;
+  }
+  header .search-place form {
+    display: none;
+  }
+  header .search-place form input {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=media.css.map */
