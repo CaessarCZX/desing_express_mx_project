@@ -1167,13 +1167,15 @@ Footer .container .foo-space .container-contact-us form input[type=submit]:hover
   header .menu-block .header-right-block .search-place form.md-screen {
     opacity: 1;
     background-color: #fff;
-    border-radius: 7px 40px 48px 7px;
+    border-radius: 40px 40px 48px 40px;
     box-shadow: inset 5px -5px 10px rgba(0, 0, 0, 0.2);
+    border: #004e89 2px solid;
   }
   header .menu-block .header-right-block .search-place form.md-screen::after {
     content: "";
     display: block;
     background-color: #fff;
+    border: #004e89 2px solid;
     position: absolute;
     top: -15px;
     right: 0;
@@ -1207,6 +1209,9 @@ Footer .container .foo-space .container-contact-us form input[type=submit]:hover
     width: 87px;
   }
   header .menu-block .header-right-block {
+    gap: 0;
+  }
+  header .menu-block .header-right-block .menu-wrap {
     display: none;
   }
   main #home {
