@@ -243,11 +243,11 @@ const mainObserver = new IntersectionObserver(loadArea, observerOptions);
 
 elemenTarget.forEach(element => {
   animationTargets.push(document.getElementById(element));
-})
+});
 
 animationTargets.forEach(target => {
   mainObserver.observe(target);
-})
+});
 
 /*-----------------------------------------------------------------------------------*/
 /*	Smooth Scroll
@@ -280,12 +280,31 @@ const smoothScroll = (target, duration) => {
   requestAnimationFrame(animation);
 }
 
-const toMeetUsSection = document.querySelector('#toMeetUs');
+let activatorButtons = [];
+const elementIDSection = [
+  '#home',
+  '#meet-us',
+  '#our-projects',
+  '#our-team',
+  '#contact-us',
+];
+const buttonActivatorName = [
+  'toHome',
+  'toMeetUs',
+  'toProjects',
+  'toTeam',
+  'toContacts',
+];
 
-toMeetUsSection.addEventListener('click', () => {
-  smoothScroll('#meet-us', 1000);
-})
+buttonActivatorName.forEach(button => {
+  activatorButtons.push(document.getElementById(button));
+});
 
+activatorButtons.forEach((button, index) => {
+  button.addEventListener('click', () => {
+    smoothScroll(elementIDSection[index], 1000);
+  });
+});
 /*-----------------------------------------------------------------------------------*/
 /*	Loader disabler when HTML Document is loaded and DOM is ready.
 /*-----------------------------------------------------------------------------------*/
