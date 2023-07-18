@@ -258,6 +258,9 @@ header .menu-block .header-right-block .menu-wrap li {
   transition: color 0.3s ease-out;
 }
 header .menu-block .header-right-block .menu-wrap li:nth-child(1) {
+  display: none;
+}
+header .menu-block .header-right-block .menu-wrap li:nth-child(2) {
   color: #0062c9;
 }
 header .menu-block .header-right-block .menu-wrap li:hover {
@@ -1212,7 +1215,52 @@ Footer .container .foo-space .container-contact-us form input[type=submit]:hover
     gap: 0;
   }
   header .menu-block .header-right-block .menu-wrap {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    z-index: 100;
+    background-color: #1c1c1c;
+    left: 0;
+    padding: 4vw 0 100vh 0;
+    transform: translate(-50px, -42px);
+    flex-direction: column;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+    transition: opacity 0.3s ease-in-out;
+  }
+  header .menu-block .header-right-block .menu-wrap li {
+    padding: 1rem 45vw 1rem 10vw;
+  }
+  header .menu-block .header-right-block .menu-wrap li:nth-child(1) {
+    padding: 1rem 1rem 1rem 10vw;
+    display: flex;
+    justify-content: space-between;
+  }
+  header .menu-block .header-right-block .menu-wrap li:nth-child(1):hover {
+    background-color: transparent;
+  }
+  header .menu-block .header-right-block .menu-wrap li:hover {
+    background-color: #393636;
+  }
+  header .menu-block .header-right-block .menu-wrap li .header-mobile-close-menu {
+    width: 3.2rem;
+    height: 3.2rem;
+    align-self: flex-start;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 2.2rem;
+    border-radius: 50%;
+  }
+  header .menu-block .header-right-block .menu-wrap li .header-mobile-close-menu:active {
+    background-color: #ee3236;
+  }
+  header .menu-block .header-right-block .menu-wrap li .logo-menu-mobile {
+    width: 65px;
+    height: 30px;
+  }
+  header .menu-block .header-right-block .menu-wrap.active-wrap-menu {
+    visibility: visible;
+    opacity: 1;
   }
   main #home {
     margin-top: 77px;

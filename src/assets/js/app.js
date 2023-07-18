@@ -7,7 +7,24 @@ const searcherMidActivator = document.querySelector('#search-place-md-activator'
 searcherMidActivator.addEventListener('click', () => {
   midSearcher.classList.toggle('md-screen');
   searcherMidActivator.classList.toggle('active-search');
-})
+});
+
+const initMenu = () => {
+  const openMenu = document.getElementById('open-menu');
+  const closeMenu = document.getElementById('close-menu');
+  const menuActivator = document.querySelector('.menu-wrap');
+  const reactiveMenu = 'active-wrap-menu';
+
+  openMenu.addEventListener('click', () => {
+    menuActivator.classList.add(reactiveMenu);
+  });
+
+  closeMenu.addEventListener('click', () => {
+    menuActivator.classList.remove(reactiveMenu);
+  });
+}
+
+initMenu();
 /*-----------------------------------------------------------------------------------*/
 /*	Services animation area
 /*-----------------------------------------------------------------------------------*/
