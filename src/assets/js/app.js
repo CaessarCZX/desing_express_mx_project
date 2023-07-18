@@ -222,13 +222,15 @@ const elemenTarget = [
   'meet-us-load',
   'services-load',
   'branding-load-sc1',
-  'branding-load-sc2'
+  'branding-load-sc2',
+  'brands-load',
+  'team-load',
 ];
 
 const observerOptions = {
   root: null, // Observar el viewport
   rootMargin: '0px 0px 0px 0px', // Sin margen adicional
-  threshold: 0.5 // Umbral de intersección del 50%
+  threshold: 0.3 // Umbral de intersección del 50%
 };
 
 const loadArea = (entries) => {
