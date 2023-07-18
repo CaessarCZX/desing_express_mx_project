@@ -13,6 +13,7 @@ const initMenu = () => {
   const openMenu = document.getElementById('open-menu');
   const closeMenu = document.getElementById('close-menu');
   const menuActivator = document.querySelector('.menu-wrap');
+  const itemMenuActive = document.querySelectorAll('.menu-wrap li a');
   const reactiveMenu = 'active-wrap-menu';
 
   openMenu.addEventListener('click', () => {
@@ -21,6 +22,12 @@ const initMenu = () => {
 
   closeMenu.addEventListener('click', () => {
     menuActivator.classList.remove(reactiveMenu);
+  });
+
+  itemMenuActive.forEach((item) => {
+    item.addEventListener('click', () => {
+      menuActivator.classList.remove(reactiveMenu);
+    });
   });
 }
 
